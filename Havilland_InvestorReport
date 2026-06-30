@@ -1,0 +1,42 @@
+{
+    "title": "investor_reports",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Auto-increment primary key"
+        },
+        "title": {
+            "type": "string",
+            "description": "Report title"
+        },
+        "summary": {
+            "type": "string",
+            "description": "Brief summary paragraph of the report"
+        },
+        "category": {
+            "type": "string",
+            "description": "Report category (e.g., Quarterly Update, Market Analysis, Strategy Brief)"
+        },
+        "published_date": {
+            "type": "string",
+            "format": "date",
+            "description": "Publication date of the report"
+        },
+        "file_url": {
+            "type": "string",
+            "description": "URL to the downloadable report file"
+        },
+        "is_published": {
+            "type": "boolean",
+            "default": true,
+            "description": "Whether the report is visible to investors"
+        }
+    },
+    "required": [
+        "title",
+        "summary",
+        "category",
+        "published_date"
+    ]
+}
