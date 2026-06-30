@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <title>Havilland Active Ventures | Homepage Prototype</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="components/content/content-components.css" />
+    <style>
+      .home-review-controls {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: flex-end;
+        height: 0;
+        margin: 0 max(var(--space-4), calc((100vw - var(--container)) / 2));
+        pointer-events: none;
+        transform: translateY(calc(var(--space-8) * -1));
+      }
+
+      .home-review-controls__button {
+        appearance: none;
+        border: 1px solid rgba(26, 0, 73, 0.18);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.74);
+        color: var(--color-surface-brand-bold);
+        cursor: pointer;
+        font: inherit;
+        font-size: 0.78rem;
+        line-height: 1;
+        padding: 0.62rem 0.78rem;
+        pointer-events: auto;
+        box-shadow: 0 12px 34px rgba(15, 5, 44, 0.08);
+        backdrop-filter: blur(14px);
+      }
+
+      .home-review-controls__button[aria-pressed="false"] {
+        background: var(--color-accent-brand-subtle);
+      }
+
+      .home-review-controls__button:focus-visible {
+        outline: 2px solid var(--color-surface-brand-bold);
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+  <body class="home-page" data-header-theme="dark">
+    <div data-site-header></div>
+
+    <main>
+      <!-- Hero Proposition -->
+      <section class="hero" data-hero-effect="dotted-surface">
+        <div class="hero__visual" aria-hidden="true"></div>
+        <div class="container hero__container">
+          <div class="layout-grid">
+            <div class="hero__content">
+              <h1>Investing where clinical value becomes scalable</h1>
+              <p>
+                Havilland Active Ventures is a growth-stage healthtech fund. We back healthcare companies that have proven
+                their clinical value and are ready to scale.
+              </p>
+              <p class="cta-row">
+                <a class="button button--primary button--neutral button--dark" href="contact.html#investors">Investor Enquiries</a>
+                <a class="button button--secondary button--neutral button--dark" href="contact.html#founders">Submit a Company</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="home-review-controls" aria-label="Homepage review controls">
+        <button class="home-review-controls__button" type="button" data-section-toggle="entities" aria-pressed="true">
+          Fund/Growth On
+        </button>
+      </div>
+
+      <!-- Fund and Growth Distinction -->
+      <section class="content-section home-section surface-subtle" data-review-section="entities" aria-labelledby="entities-heading">
+        <div class="container">
+          <div class="home-section__intro home-section__intro--entities">
+            <h2 id="entities-heading">Havilland Active Ventures and Havilland Growth</h2>
+            <p>
+              Havilland combines investment with hands-on execution. Together, the fund and platform help healthcare
+              companies navigate the journey from clinical validation to commercial scale.
+            </p>
+          </div>
+          <div class="home-feature-grid">
+            <article class="editorial-feature-card">
+              <p class="editorial-feature-card__eyebrow">The fund</p>
+              <div class="editorial-feature-card__body">
+                <p class="editorial-feature-card__description">
+                  A growth-stage venture capital fund targeting healthcare companies from Series A onwards.
+                </p>
+              </div>
+            </article>
+            <article class="editorial-feature-card">
+              <p class="editorial-feature-card__eyebrow">The execution platform</p>
+              <div class="editorial-feature-card__body">
+                <p class="editorial-feature-card__description">
+                  An independent healthcare scaling consultancy. Provides commercial strategy, regulatory navigation, NHS
+                  and GCC market expertise, and talent support. Works with portfolio companies and directly with other
+                  healthcare businesses.
+                </p>
+              </div>
+            </article>
+          </div>
+          <p class="home-section__cta">
+            <a class="button button--secondary button--brand button--light" href="platform.html">How the two work together</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- Thesis Preview / Worldview Cards -->
+      <section class="content-section home-section surface-brand-subtle" aria-labelledby="thesis-heading">
+        <div class="container">
+          <div class="home-section__intro">
+            <h2 id="thesis-heading">The Thesis</h2>
+          </div>
+          <div class="home-dated-list">
+            <article class="content-list-item content-list-item--dated">
+              <p class="content-list-item__meta">1850s to 1950s</p>
+              <div class="content-list-item__body">
+                <h3 class="content-list-item__title">Public Health</h3>
+                <p class="content-list-item__description">
+                  Population-scale intervention through civic infrastructure: sanitation, vaccines, maternity care. A new
+                  layer of health value, built from scratch.
+                </p>
+              </div>
+            </article>
+            <article class="content-list-item content-list-item--dated">
+              <p class="content-list-item__meta">1950s to 2020s</p>
+              <div class="content-list-item__body">
+                <h3 class="content-list-item__title">Hospital Health</h3>
+                <p class="content-list-item__description">
+                  Clinician-led systems focused on specialisation and treatment. Hospitals, pharmaceuticals, modern medicine.
+                  Enormous capital deployed. Enormous returns generated.
+                </p>
+              </div>
+            </article>
+            <article class="content-list-item content-list-item--dated">
+              <p class="content-list-item__meta">2020s onwards</p>
+              <div class="content-list-item__body">
+                <h3 class="content-list-item__title">Personalised Health</h3>
+                <p class="content-list-item__description">
+                  Distributed, data-driven, patient-enabled care. Prevention, prediction, personalised treatment pathways.
+                  The transition is underway. The infrastructure companies are being built now.
+                </p>
+              </div>
+            </article>
+          </div>
+          <p class="home-section__cta">
+            <a class="button button--secondary button--brand button--light" href="thesis.html">View our full investment thesis</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- Proof / Credibility Metrics -->
+      <section class="content-section home-section" aria-label="Built with healthcare, investment and growth experience">
+        <div class="container">
+          <div class="home-metrics-grid">
+            <article class="large-metric-card">
+              <p class="large-metric-card__value">120+</p>
+              <p class="large-metric-card__label">Years of combined healthcare experience across the partnership</p>
+            </article>
+            <article class="large-metric-card">
+              <p class="large-metric-card__value">£320m+</p>
+              <p class="large-metric-card__label">Capital raised across partner ventures</p>
+            </article>
+            <article class="large-metric-card">
+              <p class="large-metric-card__value">$20bn+</p>
+              <p class="large-metric-card__label">Exit value across partner-backed companies</p>
+            </article>
+            <article class="large-metric-card">
+              <p class="large-metric-card__value">32 countries</p>
+              <p class="large-metric-card__label">Global network and market reach</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team Preview -->
+      <section class="content-section home-section surface-subtle" aria-labelledby="team-preview-heading">
+        <div class="container">
+          <div class="home-section__intro home-section__intro--team">
+            <h2 id="team-preview-heading">The Team</h2>
+            <p>
+              Experienced investors, operators and healthcare leaders helping founders scale.
+            </p>
+            <p class="home-section__cta">
+              <a class="button button--secondary button--brand button--light" href="team.html">Meet the full team</a>
+            </p>
+          </div>
+          <div class="home-team-grid">
+            <article class="team-member-card">
+              <div class="team-member-card__media">
+                <img src="assets/images/profile-MattHancock.png" alt="Matt Hancock" />
+              </div>
+              <div class="team-member-card__body">
+                <h3 class="team-member-card__name">Matt Hancock</h3>
+                <p class="team-member-card__description">General Partner</p>
+              </div>
+            </article>
+            <article class="team-member-card">
+              <div class="team-member-card__media">
+                <img src="assets/images/profile-UriAdoni.png" alt="Uri Adoni" />
+              </div>
+              <div class="team-member-card__body">
+                <h3 class="team-member-card__name">Uri Adoni</h3>
+                <p class="team-member-card__description">General Partner</p>
+              </div>
+            </article>
+            <article class="team-member-card">
+              <div class="team-member-card__media">
+                <img src="assets/images/profile-LordJamesBethell.png" alt="Lord James Bethell" />
+              </div>
+              <div class="team-member-card__body">
+                <h3 class="team-member-card__name">Lord James Bethell</h3>
+                <p class="team-member-card__description">Senior Partner</p>
+              </div>
+            </article>
+            <article class="team-member-card">
+              <div class="team-member-card__media">
+                <img src="assets/images/profile-ShamikParekh.png" alt="Shamik Parekh" />
+              </div>
+              <div class="team-member-card__body">
+                <h3 class="team-member-card__name">Shamik Parekh</h3>
+                <p class="team-member-card__description">Founding Partner</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Investment Focus / Criteria Preview -->
+      <section class="content-section home-section surface-brand-bold" aria-labelledby="focus-heading">
+        <div class="container">
+          <div class="home-section__intro home-section__intro--inverse home-section__intro--focus">
+            <h2 id="focus-heading">What We Back</h2>
+            <p>
+              We back the technologies, platforms and infrastructure shaping the future of healthcare.
+            </p>
+          </div>
+          <div class="home-dark-info-grid">
+            <article class="dark-info-card">
+              <h3 class="dark-info-card__title">AI Diagnostics</h3>
+              <p class="dark-info-card__description">Improving diagnosis, detection and clinical decision-making at scale.</p>
+            </article>
+            <article class="dark-info-card">
+              <h3 class="dark-info-card__title">Health Data Platforms</h3>
+              <p class="dark-info-card__description">Connecting systems, workflows and healthcare data across care settings.</p>
+            </article>
+            <article class="dark-info-card">
+              <h3 class="dark-info-card__title">Genomics</h3>
+              <p class="dark-info-card__description">Precision medicine, prevention and personalised treatment pathways.</p>
+            </article>
+            <article class="dark-info-card">
+              <h3 class="dark-info-card__title">Medical Devices</h3>
+              <p class="dark-info-card__description">Technologies enabling modern healthcare delivery outside hospital settings.</p>
+            </article>
+            <article class="dark-info-card">
+              <h3 class="dark-info-card__title">Workflow Automation</h3>
+              <p class="dark-info-card__description">Improving efficiency, capacity and clinical operations for health systems.</p>
+            </article>
+            <article class="dark-info-card">
+              <h3 class="dark-info-card__title">Clinical Infrastructure</h3>
+              <p class="dark-info-card__description">The underlying systems and platforms supporting healthcare at scale.</p>
+            </article>
+          </div>
+          <p class="home-section__cta">
+            <a class="button button--secondary button--brand button--dark" href="criteria.html">Our investment criteria</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- Closing CTA -->
+      <section class="cta home-section surface-subtle home-closing-cta" aria-label="Closing call to action">
+        <div class="container home-closing-cta__layout">
+          <div class="home-closing-cta__intro">
+            <h2>Work with Havilland Active Ventures</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae arcu sed nibh luctus facilisis.
+            </p>
+          </div>
+          <div class="home-closing-cta__lists">
+            <article class="content-list-item content-list-item--contact home-cta-list">
+              <div class="content-list-item__body">
+                <h3 class="content-list-item__title">For founders</h3>
+                <p class="content-list-item__description">Building a healthcare company at Series A or B? Tell us about your company.</p>
+              </div>
+              <a class="button button--link button--brand button--light content-list-item__link" href="contact.html#founders">
+                Submit Your Company
+                <span class="button__icon button__icon--arrow-forward" aria-hidden="true"></span>
+              </a>
+            </article>
+            <article class="content-list-item content-list-item--contact home-cta-list">
+              <div class="content-list-item__body">
+                <h3 class="content-list-item__title">For investors</h3>
+                <p class="content-list-item__description">Interested in Havilland Active Ventures Fund I? We are in first close and welcoming LP conversations.</p>
+              </div>
+              <a class="button button--link button--brand button--light content-list-item__link" href="contact.html#investors">
+                Investor Enquiries
+                <span class="button__icon button__icon--arrow-forward" aria-hidden="true"></span>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-site-footer></div>
+    <script src="js/site-components.js"></script>
+    <script src="js/nav.js"></script>
+    <script type="module">
+      import { mount } from './js/hero-effects/dotted-surface-three.js';
+      const hero = document.querySelector('[data-hero-effect="dotted-surface"]');
+      if (hero) mount(hero);
+
+      const sectionToggle = document.querySelector('[data-section-toggle="entities"]');
+      const entitiesSection = document.querySelector('[data-review-section="entities"]');
+
+      if (sectionToggle && entitiesSection) {
+        sectionToggle.addEventListener('click', () => {
+          const isVisible = sectionToggle.getAttribute('aria-pressed') === 'true';
+          const nextVisible = !isVisible;
+
+          sectionToggle.setAttribute('aria-pressed', String(nextVisible));
+          sectionToggle.textContent = nextVisible ? 'Fund/Growth On' : 'Fund/Growth Off';
+          entitiesSection.hidden = !nextVisible;
+        });
+      }
+    </script>
+  </body>
+</html>
